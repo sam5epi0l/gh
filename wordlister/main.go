@@ -15,6 +15,8 @@ func main()  {
 	passwordLength := flag.String("pl", "1,2,4", "Length of the password")
 	characters := flag.String("ch", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()+-./", "characters to make wordlist")
 
+	flag.Parse()
+	
 	passwordLengths := strings.Split(*passwordLength, ",")
 	charactersList := strings.Split(*characters, "")
 
